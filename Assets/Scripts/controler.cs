@@ -3,36 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class controler : MonoBehaviour{
-    public GameObject diri;
     public Animator animator;
+    public bool cat_sleep;
 
     private float speed;
-    private bool isFacingRight = true;
-    private bool acses = false;
-
+    private bool isFacingRight;
 
     private void Start()
     {
         speed = 80;
+        cat_sleep = false;
+        isFacingRight = true;
     }
     //updete per frame
     void Update(){
-        if (Time.frameCount % 60 == 0 && !acses){
+        if (Time.frameCount % 60 == 0 && !cat_sleep){
             if (Random.Range(1, 11) == 1) {
                 animator.SetTrigger("sleep");
-                diri.GetComponent<dirihore>().cat_counter += 1;
-                acses = true;
+                cat_sleep = true;
             }
         }
     }
 
     //check
     void OnMouseDown(){
-        if (acses){
+        if (cat_sleep){
             animator.SetTrigger("poof");
             animator.SetTrigger("timer");
-            diri.GetComponent<dirihore>().cat_counter -= 1;
-            acses = false;
+            cat_sleep = false;
         }
     }
 
