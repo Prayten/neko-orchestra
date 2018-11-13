@@ -59,7 +59,8 @@ public class MenuLevelController : MonoBehaviour
     void OnClickQuit()
     {
         print("Quiting...");
-        SceneManager.LoadScene("Menu");
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
 
 }

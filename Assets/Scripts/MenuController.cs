@@ -32,7 +32,7 @@ public class MenuController : MonoBehaviour {
     void OnClickStart()
     {
         Debug.Log("Loading SampleScene...");
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 
     void OnclickExit()
