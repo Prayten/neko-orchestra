@@ -4,11 +4,18 @@ using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
 {
+
+    public GameObject gameOver;
     public Text timerLabel;
     public float lvlTime;
 
     void Update()
     {
+        if(lvlTime <= 0)
+        {
+            Time.timeScale = 0;
+            gameOver.SetActive(true);
+        }
         lvlTime -= Time.deltaTime;
 
         var minutes = lvlTime / 60; //Divide the guiTime by sixty to get the minutes.

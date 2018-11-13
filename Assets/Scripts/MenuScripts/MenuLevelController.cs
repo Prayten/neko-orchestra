@@ -12,6 +12,7 @@ public class MenuLevelController : MonoBehaviour
     public Button unpauseMenu;
     public Button quitMenu;
     public Button pauseMenu;
+    public Button restartMenu;
 
     // Use this for initialization
     void Start()
@@ -22,6 +23,8 @@ public class MenuLevelController : MonoBehaviour
         pause.onClick.AddListener(TaskOnClickPause);
         Button quit = quitMenu.GetComponent<Button>();
         quit.onClick.AddListener(TaskOnClickQuit);
+        Button restart = restartMenu.GetComponent<Button>();
+        restart.onClick.AddListener(TaskOnClickRestart);
 
 
     }
@@ -44,6 +47,12 @@ public class MenuLevelController : MonoBehaviour
         OnClickQuit();
     }
 
+    public void TaskOnClickRestart()
+    {
+        Debug.Log("You have clicked the button");
+        OnClickRestart();
+    }
+
     void OnClickUnpause()
     {
         print("Continue...");
@@ -61,6 +70,12 @@ public class MenuLevelController : MonoBehaviour
         print("Quiting...");
         Time.timeScale = 1;
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+    }
+
+    void OnClickRestart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+        Time.timeScale = 1;
     }
 
 }
