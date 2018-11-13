@@ -55,8 +55,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\controler.cs" />
      <Compile Include="Assets\Scripts\dirihore.cs" />
-     <Compile Include="Assets\Scripts\MenuController.cs" />
-     <Compile Include="Assets\Scripts\MenuLevelController.cs" />
+     <Compile Include="Assets\Scripts\MenuScripts\MenuController.cs" />
+     <Compile Include="Assets\Scripts\MenuScripts\MenuLevelController.cs" />
+     <Compile Include="Assets\Scripts\MenuScripts\TimerController.cs" />
      <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\pointcon.cs" />
      <Compile Include="Assets\Scripts\QuitController.cs" />
