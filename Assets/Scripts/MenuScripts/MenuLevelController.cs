@@ -75,7 +75,6 @@ public class MenuLevelController : MonoBehaviour
     void OnClickRestart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
-        Time.timeScale = 1;
     }
 
 }
