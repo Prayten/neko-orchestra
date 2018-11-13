@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour {
 
-
+    public int count = 0;
     
     public Button startMenu;
     public Button exitMenu;
@@ -38,10 +38,6 @@ public class MenuController : MonoBehaviour {
         loadlvl3.onClick.AddListener(TaskOnClickLoadLvl3);
         Button loadextralvl = loadextralvlMenu.GetComponent<Button>();
         loadextralvl.onClick.AddListener(TaskOnClickLoadExtraLvl);
-
-
-
-
     }
 	
     public void TaskOnClickStart()
@@ -49,6 +45,7 @@ public class MenuController : MonoBehaviour {
         Debug.Log("Button Start clicked");
         Debug.Log("Loading lvl1...");
         SceneManager.LoadScene("lvl1", LoadSceneMode.Single);
+        count += 1;
     }
 
     public void TaskOnClickExit()
