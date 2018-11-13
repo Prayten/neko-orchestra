@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{7B23E9DB-F6FB-67F7-B1EF-60A0C2FBB04B}</ProjectGuid>
+    <ProjectGuid>{8A69E803-5A7F-CDA9-1902-A5CA49BEDF81}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -73,16 +73,16 @@
     <Compile Include="Assets\Scripts\SimpleSpawnController.cs" />
     <Compile Include="Assets\Scripts\SpawnController.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Obmen/neko orchestra/neko orchestra/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Obmen/neko orchestra/neko orchestra/neko-orchestra/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Obmen/neko orchestra/neko orchestra/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Obmen/neko orchestra/neko orchestra/neko-orchestra/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Obmen/neko orchestra/neko orchestra/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Obmen/neko orchestra/neko orchestra/neko-orchestra/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Obmen/neko orchestra/neko orchestra/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Obmen/neko orchestra/neko orchestra/neko-orchestra/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
