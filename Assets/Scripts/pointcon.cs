@@ -17,6 +17,4 @@ public class pointcon : MonoBehaviour {
         text.text = "Score: " + score;
     }
 
-
-
 }

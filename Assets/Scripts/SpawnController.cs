@@ -4,39 +4,19 @@ using UnityEngine;
 
 public class SpawnController : MonoBehaviour
 {
-
-
     public GameObject Spawn;
-    public GameObject cat1;
-    public GameObject cat2;
-    public GameObject cat3;
+    public GameObject[] cats = new GameObject[5];
 
     
-
-    private GameObject cat; 
-    private GameObject rb;
-    
-
-
     // Update is called once per frame
     void Update()
     {
         
         if (Time.frameCount % 60 == 0){
-            switch (Random.Range(1, 4))
-            {
-                case 1:
-                    cat = cat1;
-                    break;
-                case 2:
-                    cat = cat2;
-                    break;
-                case 3:
-                    cat = cat3;
-                    break;
-            }
-            rb = Instantiate(cat, Spawn.transform);
-            rb.GetComponent<Rigidbody2D>().AddForce(new Vector2(80, 0));
+
+            GameObject cat = Instantiate(cats[Random.Range(0,cats.Length)], Spawn.transform);
+            cat.transform.parent = null;
+            cat.GetComponent<Rigidbody2D>().AddForce(new Vector2(80, 0));
             
         }
     }

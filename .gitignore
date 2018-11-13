@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 
 Temp/UnityLockfile
+=======
+Library/*
+Temp/*
+.vs/*
+>>>>>>> 783376ff7f0fa2cf57067029dd795ce7e4915a86
