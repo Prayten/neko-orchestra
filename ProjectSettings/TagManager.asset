@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Fliper
   - Cat
+  - dead
+  - ran
   layers:
   - Default
   - TransparentFX

@@ -5,9 +5,13 @@ using UnityEngine;
 public class controler : MonoBehaviour{
     public Animator animator;
     public bool cat_sleep;
+    public bool losepoint;
+    public bool addpoint;
 
     private float speed;
     private bool isFacingRight;
+    private bool active;
+    private bool random;
 
     private void Start()
     {
@@ -17,11 +21,18 @@ public class controler : MonoBehaviour{
     }
     //updete per frame
     void Update(){
-        if (Time.frameCount % 60 == 0 && !cat_sleep){
+        addpoint = false;
+        losepoint = false;
+        if (Time.frameCount % 60 == 0 && !cat_sleep && !random){
             if (Random.Range(1, 11) == 1) {
                 animator.SetTrigger("sleep");
                 cat_sleep = true;
             }
+        }
+        if (active)
+        {
+            cat_sleep = false;
+            Destroy(gameObject);
         }
     }
 
@@ -31,13 +42,27 @@ public class controler : MonoBehaviour{
             animator.SetTrigger("poof");
             animator.SetTrigger("timer");
             cat_sleep = false;
+            addpoint = true;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Fliper"))
-        { 
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.CompareTag("ran"))
+        {
+            random = true;
+        }
+
+        if (collision.gameObject.CompareTag("dead"))
+        {
+            if (cat_sleep)
+            {
+                cat_sleep = false;
+                losepoint = true;
+            }
+            active = true;
+        }
+
+        if (collision.gameObject.CompareTag("Fliper")){ 
             if (isFacingRight)
             {
                 Flip(-2);
