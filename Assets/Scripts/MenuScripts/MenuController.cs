@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour {
-
+    
     public int count = 0;
     
     public Button startMenu;
@@ -80,7 +80,7 @@ public class MenuController : MonoBehaviour {
 
     public void TaskOnClickLoadLvl2()
     {
-        OnClickLoadLvl("lvl2");
+                OnClickLoadLvl("lvl2");
     }
 
     public void TaskOnClickLoadLvl3()

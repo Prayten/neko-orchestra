@@ -67,9 +67,8 @@
     <Compile Include="Assets\Scripts\MenuScripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\MenuLevelController.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\TimerController.cs" />
-    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\pointcon.cs" />
-    <Compile Include="Assets\Scripts\QuitController.cs" />
+    <Compile Include="Assets\Scripts\progress_bar.cs" />
     <Compile Include="Assets\Scripts\SimpleSpawnController.cs" />
     <Compile Include="Assets\Scripts\SpawnController.cs" />
     <Reference Include="UnityEditor.StandardEvents">
