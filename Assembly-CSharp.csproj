@@ -54,6 +54,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\controler.cs" />
+     <Compile Include="Assets\Scripts\Data\Configure.cs" />
+     <Compile Include="Assets\Scripts\Data\Load.cs" />
+     <Compile Include="Assets\Scripts\Data\Save.cs" />
      <Compile Include="Assets\Scripts\dirihore.cs" />
      <Compile Include="Assets\Scripts\global_var.cs" />
      <Compile Include="Assets\Scripts\MenuScripts\MenuController.cs" />
