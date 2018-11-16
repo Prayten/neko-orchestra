@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public class global_var : MonoBehaviour{
     public GameObject[] cats = new GameObject[64];
     public int cat_counter;
-    public int score;
+    public Slider slider_counter;
+    public Image slider_image;
+    public Text scoretext;
 
     private bool[] one_time = new bool[64];
+    private int score;
 
     // Use this for initialization
     void Start () {
@@ -17,7 +20,9 @@ public class global_var : MonoBehaviour{
     }
 	
 	// Update is called once per frame
-	void Update () {  
+	void Update () {
+        scoretext.text = "Score " + score;
+        slider_counter.value = score;
         for (int i = 0; i < cats.Length; i++){
             if (cats[i] != null){
                 //checking lezy cat 
