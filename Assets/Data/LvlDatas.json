@@ -1,10 +1,10 @@
 {
-	"lvls":  [{
-		"numLvl": 1,
-		"progress": false
+	"LvlCollectior":  [{
+		"lvlName": "lvl1",
+		"progress": "check"
 	}, 	{
-		"numLvl" :2,
-		"progress": false
+		"lvlName" :"lvl2",
+		"progress": "check"
 	}],
 	"collectionName": "LvlDatas"
 }
