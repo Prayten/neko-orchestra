@@ -4,24 +4,27 @@ using System.IO;
 
 public class LoadLvlData : MonoBehaviour {
 
-    public Text text;
-
-    [SerializeField]
-    private string lvlPath;
-    
     private LvlCollection lvlCollection;
     
+    
     [ContextMenu("Load LvlData")]
-    private void LoadLvls()
+    private void LoadLvls(string lvlPath)
     {
         using (StreamReader stream = new StreamReader(lvlPath))
         {
             string json = stream.ReadToEnd();
             lvlCollection = JsonUtility.FromJson<LvlCollection>(json);
-            
         }
         
-        //Debug.Log("Levels loaded: " + lvlCollection.lvlDatas.Length);
-        text.text = lvlCollection.ToString();
+        Debug.Log("Levels loaded: " + lvlCollection.lvls.Length);
+        
     }
+
+    public LvlCollection getLoad(string lvlPath)
+    {
+        LoadLvls(lvlPath);
+        print(lvlCollection.ToString());
+        return lvlCollection;
+    }
+
 }

@@ -210,49 +210,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1195647417702380, guid: e895e16564ea9e74a9516523f13b9e02, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1728436224372792, guid: e895e16564ea9e74a9516523f13b9e02, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660080322791896, guid: e895e16564ea9e74a9516523f13b9e02, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e895e16564ea9e74a9516523f13b9e02, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &192926274
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 192926276}
-  - component: {fileID: 192926275}
-  m_Layer: 0
-  m_Name: Configuration
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &192926275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 192926274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e36ff5e3df367324ab48fe86f1922fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &192926276
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 192926274}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &451399646
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +302,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &858570195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1195647417702380, guid: e895e16564ea9e74a9516523f13b9e02,
+    type: 2}
+  m_PrefabInternal: {fileID: 35230778}
 --- !u!1 &1079087822
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,3 +369,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1517407600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1728436224372792, guid: e895e16564ea9e74a9516523f13b9e02,
+    type: 2}
+  m_PrefabInternal: {fileID: 35230778}
+--- !u!1 &1708457743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1577480632489526, guid: e895e16564ea9e74a9516523f13b9e02,
+    type: 2}
+  m_PrefabInternal: {fileID: 35230778}
+--- !u!114 &1708457745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1708457743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f34186d50067841a21beccf4c5fa81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvlPath: C:\Obmen\neko-orchestra\Assets\Data\lvls.json
+  BLoadLvl:
+  - {fileID: 858570195}
+  - {fileID: 1517407600}
+  - {fileID: 1940192653}
+--- !u!1 &1940192653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1660080322791896, guid: e895e16564ea9e74a9516523f13b9e02,
+    type: 2}
+  m_PrefabInternal: {fileID: 35230778}

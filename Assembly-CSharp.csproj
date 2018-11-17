@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\global_var.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\MenuLevelController.cs" />
+    <Compile Include="Assets\Scripts\MenuScripts\ProgressLvl.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\TimerController.cs" />
     <Compile Include="Assets\Scripts\pointcon.cs" />
     <Compile Include="Assets\Scripts\SimpleSpawnController.cs" />

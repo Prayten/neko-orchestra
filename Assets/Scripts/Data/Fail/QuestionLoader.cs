@@ -43,4 +43,10 @@ public class QuestionLoader: MonoBehaviour
 
         questionCollection.questions = questions;
     }
+
+    void Start()
+    {
+
+    }
+           
 }

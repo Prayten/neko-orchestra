@@ -4,6 +4,9 @@
 		"progress": false
 	}, 	{
 		"numLvl" :2,
+		"progress": true
+	}, 	{
+		"numLvl" :3,
 		"progress": false
 	}],
 	"collectionName":"Samples"
