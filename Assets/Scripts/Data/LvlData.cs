@@ -3,6 +3,6 @@
 [Serializable]
 public class LvlData{
 
-    public string lvlName;
-    public string progress;
+    public int numLvl;
+    public bool progress;
 }

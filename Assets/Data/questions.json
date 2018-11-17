@@ -1,0 +1,10 @@
+{
+	"questions":[{
+		"text":"First question",
+		"answer":"answer 1"
+		},{
+		"text":"Second question",
+		"answer":"answer 2"
+	}],
+	"collectionName":"Samples"
+}

@@ -64,9 +64,12 @@
     <Compile Include="Assets\Scripts\controler.cs" />
     <Compile Include="Assets\Scripts\Data\Fail\Configure.cs" />
     <Compile Include="Assets\Scripts\Data\Fail\Load.cs" />
+    <Compile Include="Assets\Scripts\Data\Fail\Question.cs" />
+    <Compile Include="Assets\Scripts\Data\Fail\QuestionCollection.cs" />
+    <Compile Include="Assets\Scripts\Data\Fail\QuestionLoader.cs" />
     <Compile Include="Assets\Scripts\Data\Fail\Save.cs" />
     <Compile Include="Assets\Scripts\Data\LoadLvlData.cs" />
-    <Compile Include="Assets\Scripts\Data\LvlCollectior.cs" />
+    <Compile Include="Assets\Scripts\Data\LvlCollection.cs" />
     <Compile Include="Assets\Scripts\Data\LvlData.cs" />
     <Compile Include="Assets\Scripts\Data\SaveLvlData.cs" />
     <Compile Include="Assets\Scripts\dirihore.cs" />

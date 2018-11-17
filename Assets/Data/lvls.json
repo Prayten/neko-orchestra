@@ -1,0 +1,10 @@
+{
+	"lvls":  [{
+		"numLvl": 1,
+		"progress": false
+	}, 	{
+		"numLvl" :2,
+		"progress": false
+	}],
+	"collectionName":"Samples"
+}
