@@ -7,6 +7,7 @@ public class controler : MonoBehaviour{
     public bool cat_sleep;
     public bool losepoint;
     public bool addpoint;
+    public bool inTeam;
 
     private float speed;
     private bool isFacingRight;

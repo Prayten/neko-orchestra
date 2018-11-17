@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class global_var : MonoBehaviour{
+public class global_var : MonoBehaviour {
+
     public GameObject[] cats = new GameObject[64];
     public int cat_counter;
     public Slider slider_counter;
-    public Image slider_image;
     public Text scoretext;
+    public int score;
 
     private bool[] one_time = new bool[64];
-    private int score;
 
     // Use this for initialization
     void Start () {

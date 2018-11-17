@@ -595,7 +595,6 @@ MonoBehaviour:
   - {fileID: 0}
   cat_counter: 0
   slider_counter: {fileID: 551367057}
-  slider_image: {fileID: 0}
   scoretext: {fileID: 1577023518}
 --- !u!4 &1103216619
 Transform:
