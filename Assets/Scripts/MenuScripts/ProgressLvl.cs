@@ -3,29 +3,23 @@ using UnityEngine.UI;
 
 public class ProgressLvl : MonoBehaviour {
 
-    [SerializeField]
-    private string lvlPath;
-
-    private LoadLvlData LLD;
-    public GameObject[] BLoadLvl;
+    
     private LvlCollection lvlCollection;
+    private LoadLvlData LLD;
+
+    public GameObject[] BLoadLvl;
+    
 	// Use this for initialization
-	void Start () {
+	private void Start () {
         LLD = new LoadLvlData();
-        lvlCollection = LLD.getLoad(lvlPath);   //Получаем данные об уровнях
+        lvlCollection = LLD.getLoad();   //Получаем данные об уровнях
         for(int i = 1; i < lvlCollection.lvls.Length; i++)
         {
-            // Проверяем, какие пройдены, включаем нужные кнопки загрузки уровней
+            // Проверяем, какие уровни пройдены, включаем нужные кнопки загрузки уровней
             if(lvlCollection.lvls[i].progress)
             {
                 BLoadLvl[i].SetActive(true);
             }
         }
-	}
-
-    
-
-
-	
-	
+	}  
 }

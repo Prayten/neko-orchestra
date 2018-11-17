@@ -2,11 +2,11 @@
 
 [Serializable]
 public class LvlCollection{
-
+    //Массив данных уровней
     public LvlData[] lvls;
-
+    //Имя коллекции, к которой принадлежат уровни
     public string collectionName;
-
+    //Переопределение стандартной функции
     public override string ToString()
     {
         string result = "Lvl Data\n";

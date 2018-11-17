@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Data\LoadLvlData.cs" />
     <Compile Include="Assets\Scripts\Data\LvlCollection.cs" />
     <Compile Include="Assets\Scripts\Data\LvlData.cs" />
+    <Compile Include="Assets\Scripts\Data\ProgressSave.cs" />
     <Compile Include="Assets\Scripts\Data\SaveLvlData.cs" />
     <Compile Include="Assets\Scripts\dirihore.cs" />
     <Compile Include="Assets\Scripts\global_var.cs" />

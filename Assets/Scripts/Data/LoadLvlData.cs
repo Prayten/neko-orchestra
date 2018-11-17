@@ -1,16 +1,14 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.IO;
 
-public class LoadLvlData : MonoBehaviour {
+public class LoadLvlData{
 
     private LvlCollection lvlCollection;
-    
-    
-    [ContextMenu("Load LvlData")]
-    private void LoadLvls(string lvlPath)
-    {
-        using (StreamReader stream = new StreamReader(lvlPath))
+    private readonly string lvlPath = "C:\\Obmen\neko-orchestra\\Assets\\Data\\lvls.json";    
+    private void LoadLvls()
+    {   
+
+        using (StreamReader stream = new StreamReader(lvlPath)) // Считывает весь JSON в строку
         {
             string json = stream.ReadToEnd();
             lvlCollection = JsonUtility.FromJson<LvlCollection>(json);
@@ -19,12 +17,10 @@ public class LoadLvlData : MonoBehaviour {
         Debug.Log("Levels loaded: " + lvlCollection.lvls.Length);
         
     }
-
-    public LvlCollection getLoad(string lvlPath)
+    //Функция для внешнего вызова скрипта
+    public LvlCollection getLoad()
     {
-        LoadLvls(lvlPath);
-        print(lvlCollection.ToString());
+        LoadLvls();
         return lvlCollection;
     }
-
 }

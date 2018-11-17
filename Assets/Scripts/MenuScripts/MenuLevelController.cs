@@ -6,29 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class MenuLevelController : MonoBehaviour
 {
-
-
-
-    public Button unpauseMenu;
-    public Button quitMenu;
-    public Button pauseMenu;
-    public Button restartMenu;
-
+    public Button menuLvl;
+    
     // Use this for initialization
     void Start()
     {
-        Button unpause = unpauseMenu.GetComponent<Button>();
-        unpause.onClick.AddListener(TaskOnClickUnpause);
-        Button pause = pauseMenu.GetComponent<Button>();
-        pause.onClick.AddListener(TaskOnClickPause);
-        Button quit = quitMenu.GetComponent<Button>();
-        quit.onClick.AddListener(TaskOnClickQuit);
-        Button restart = restartMenu.GetComponent<Button>();
-        restart.onClick.AddListener(TaskOnClickRestart);
-
+        #region AddListenerОбработчиковКнопок
+        menuLvl.onClick.AddListener(TaskOnClickUnpause);
+        menuLvl.onClick.AddListener(TaskOnClickPause);
+        menuLvl.onClick.AddListener(TaskOnClickQuit);
+        menuLvl.onClick.AddListener(TaskOnClickRestart);
+        #endregion
 
     }
-
+    #region ОбработчикиСобытийКнопокМеню
     public void TaskOnClickUnpause()
     {
         Debug.Log("You have clicked the button");
@@ -52,6 +43,7 @@ public class MenuLevelController : MonoBehaviour
         Debug.Log("You have clicked the button");
         OnClickRestart();
     }
+    
 
     void OnClickUnpause()
     {
@@ -78,5 +70,5 @@ public class MenuLevelController : MonoBehaviour
         Debug.Log("Restarting scene " + SceneManager.GetActiveScene().name);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
-
+    #endregion
 }

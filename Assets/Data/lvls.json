@@ -8,6 +8,27 @@
 	}, 	{
 		"numLvl" :3,
 		"progress": false
+	}, 	{
+		"numLvl" :4,
+		"progress": false
+	}, 	{
+		"numLvl" :5,
+		"progress": false
+	}, 	{
+		"numLvl" :6,
+		"progress": false
+	}, 	{
+		"numLvl" :7,
+		"progress": false
+	}, 	{
+		"numLvl" :8,
+		"progress": false
+	}, 	{
+		"numLvl" :9,
+		"progress": false
+	}, 	{
+		"numLvl" :10,
+		"progress": false
 	}],
 	"collectionName":"Samples"
 }

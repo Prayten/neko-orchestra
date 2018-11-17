@@ -498,7 +498,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114764988774491830}
         m_MethodName: TaskOnClickPause
         m_Mode: 1
         m_Arguments:
@@ -1138,10 +1138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946ad7d5e2a35f74a8bd82cb0f863cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unpauseMenu: {fileID: 114549284250200078}
-  quitMenu: {fileID: 114424995506037992}
-  pauseMenu: {fileID: 114152683186935586}
-  restartMenu: {fileID: 114457350000552856}
+  menuLvl: {fileID: 114549284250200078}
 --- !u!114 &114825276959544826
 MonoBehaviour:
   m_ObjectHideFlags: 1
