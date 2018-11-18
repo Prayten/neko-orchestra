@@ -21,6 +21,7 @@ public class global_var : MonoBehaviour{
 	
 	// Update is called once per frame
 	void Update () {
+        
         scoretext.text = "Score " + score;
         slider_counter.value = score;
         for (int i = 0; i < cats.Length; i++){
@@ -44,5 +45,10 @@ public class global_var : MonoBehaviour{
                 }
             }
         }
+    }
+
+    public int getScore()
+    {
+        return score;
     }
 }

@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.IO;
 
-public class ProgressSave : MonoBehaviour {
+
+public class ProgressSave{
 
 
     private int NumLvl;
@@ -13,12 +11,14 @@ public class ProgressSave : MonoBehaviour {
     private SaveLvlData SLD;
     private LvlCollection lvlCollection;
 	// Use this for initialization
-	void Start () {
+	private void Start () {
         LLD = new LoadLvlData();
         lvlCollection = LLD.getLoad();
         Convert();
+        Debug.Log("Progress Save Started.");
 	}
 
+    //Конвертирует имя сцены, чтобы получить номер уровня
     private void Convert()
     {
         string lvlname = SceneManager.GetActiveScene().name;
@@ -27,16 +27,18 @@ public class ProgressSave : MonoBehaviour {
 
     public void setComplete()
     {
-        lvlComplete = true;
-    }
-
-    private void OnApplicationQuit()
-    {
+        Start();
+        
         SLD = new SaveLvlData();
-        if(lvlComplete)
-        {
-            lvlCollection.lvls[NumLvl-1].progress = true;
-        }
+        
+        lvlCollection.lvls[NumLvl - 1].progress = true;
+        
         SLD.Save(lvlCollection);
     }
+
+
+
+    
+        
+    
 }

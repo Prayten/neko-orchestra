@@ -13,6 +13,7 @@ public class TimerController : MonoBehaviour
 
     private void Start()
     {
+        //Получает время, отведенное на уровень, из скрипта LvlSettings
         lvlTime = lvlSettings.GetComponent<LvlSettings>().getTimer();
     }
 

@@ -5,16 +5,25 @@ using UnityEngine.UI;
 
 public class pointcon : MonoBehaviour {
 
-    public Text text;
-    public int score = 0;
+    private int neededScore;
+    
+    public GameObject LvlSettings;
+    public GameObject globarVar; //!!! Переделать!!!
+    private int score = 0;
 	// Use this for initialization
 	void Start () {
         print("Pointcon");
+        
 	}
 
     private void Update()
     {
-        text.text = "Score: " + score;
+        score = globarVar.GetComponent<global_var>().getScore(); // !!! Переделать!!!
+        
+        if (LvlSettings.GetComponent<LvlSettings>().getScore() == score)
+        {
+            LvlSettings.GetComponent<LvlSettings>().setScore(score);
+        }
     }
 
 }

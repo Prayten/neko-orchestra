@@ -16,6 +16,7 @@ public class MenuLevelController : MonoBehaviour
         menuLvl.onClick.AddListener(TaskOnClickPause);
         menuLvl.onClick.AddListener(TaskOnClickQuit);
         menuLvl.onClick.AddListener(TaskOnClickRestart);
+        menuLvl.onClick.AddListener(TaskOnClickNextLvl);
         #endregion
 
     }
@@ -43,7 +44,20 @@ public class MenuLevelController : MonoBehaviour
         Debug.Log("You have clicked the button");
         OnClickRestart();
     }
-    
+
+    public void TaskOnClickNextLvl()
+    {
+        Debug.Log("You have clicked the button");
+        TaskOnClickNextLvl();
+    }
+
+
+    void OnClickNextLvl()
+    {
+        //Нужно понять, как получить имя следующего уровня
+        //Debug.Log("Loading Next Lvl...");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+    }
 
     void OnClickUnpause()
     {

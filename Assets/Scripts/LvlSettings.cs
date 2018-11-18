@@ -6,8 +6,12 @@ using System.IO;
 public class LvlSettings : MonoBehaviour {
 
     private int score;
+    private bool end;
     private ProgressSave PS;
 
+    public GameObject Victory;
+
+    //Условия уровня, которые можно выставить в меню Unity
     [SerializeField]
     private float timer;
     [SerializeField]
@@ -20,20 +24,31 @@ public class LvlSettings : MonoBehaviour {
 
     private void Update()
     {
-
-        if(neededScore == score)
+        //Проверяет, выполнено ли условие уровня
+        if(neededScore == score && !end)
         {
+            Debug.Log("Условие уровня выполнено");
             PS.setComplete();
+            end = true;
+            Time.timeScale = 0;
+            Victory.SetActive(true);
+
         }
     }
 
+    //Выдает время , отведенное на уровень
     public float getTimer()
     {
         return timer;
     }
-
+    
     public void setScore(int scorePlus)
     {
         score = scorePlus;
+    }
+
+    public int getScore()
+    {
+        return neededScore;
     }
 }
