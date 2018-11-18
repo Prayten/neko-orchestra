@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class controler : MonoBehaviour{
-    public Animator animator;
-    public bool cat_sleep;
-    public bool losepoint;
-    public bool addpoint;
-    public bool inTeam;
 
+    public GameObject global_var;
+    public Animator animator;
+    public bool inTeam;
+    public string curentspawn;
+
+    private bool cat_sleep;
     private float speed;
     private bool isFacingRight;
-    private bool active;
-    private bool random;
+    private bool one_time;
 
     private void Start()
     {
@@ -22,18 +22,30 @@ public class controler : MonoBehaviour{
     }
     //updete per frame
     void Update(){
-        addpoint = false;
-        losepoint = false;
-        if (Time.frameCount % 60 == 0 && !cat_sleep && !random){
-            if (Random.Range(1, 11) == 1) {
-                animator.SetTrigger("sleep");
-                cat_sleep = true;
+        if (curentspawn == "simple")
+        {
+            if (Time.frameCount % 60 == 0 && !cat_sleep)
+            {
+                if (Random.Range(1, 11) == 1)
+                {
+                    animator.SetTrigger("sleep");
+                    cat_sleep = true;
+                    global_var.GetComponent<global_var>().cat_counter += 1;
+                }
             }
         }
-        if (active)
+        if (curentspawn == "more")
         {
-            cat_sleep = false;
-            Destroy(gameObject);
+            if (!one_time)
+            {
+                if (Random.Range(1, 11) == 1)
+                {
+                    animator.SetTrigger("sleep");
+                    cat_sleep = true;
+                    global_var.GetComponent<global_var>().cat_counter += 1;
+                }
+                one_time = true;
+            }
         }
     }
 
@@ -43,24 +55,20 @@ public class controler : MonoBehaviour{
             animator.SetTrigger("poof");
             animator.SetTrigger("timer");
             cat_sleep = false;
-            addpoint = true;
+            global_var.GetComponent<global_var>().cat_counter -= 1;
+            global_var.GetComponent<global_var>().score += 1;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("ran"))
-        {
-            random = true;
-        }
-
         if (collision.gameObject.CompareTag("dead"))
         {
             if (cat_sleep)
             {
-                cat_sleep = false;
-                losepoint = true;
+                global_var.GetComponent<global_var>().cat_counter -= 1;
+                global_var.GetComponent<global_var>().score -= 1;
             }
-            active = true;
+            Destroy(gameObject);
         }
 
         if (collision.gameObject.CompareTag("Fliper")){ 

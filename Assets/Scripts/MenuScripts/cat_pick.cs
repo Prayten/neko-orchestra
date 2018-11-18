@@ -8,8 +8,7 @@ public class cat_pick : MonoBehaviour {
     public int cat_count;
     public GameObject[] cats;
     public GameObject cont;
-
-    private Button cat;
+    public Button cat;
 
     private void Start()
     {

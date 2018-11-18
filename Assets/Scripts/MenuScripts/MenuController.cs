@@ -7,8 +7,7 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour {
 
     public int count = 0;
-    
-    private Button startMenu;
+    public Button startMenu;
 
     // Use this for initialization
     void Start () {

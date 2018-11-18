@@ -15,22 +15,11 @@ public class SpawnController : MonoBehaviour
     {
         
         if (Time.frameCount % 60 == 0){
-
             GameObject cat = Instantiate(cats[Random.Range(0,cats.Length)], Spawn.transform);
             cat.transform.parent = null;
-            for (int i = 0; i < globalvar.GetComponent<global_var>().cats.Length; i++)
-            {
-                if (globalvar.GetComponent<global_var>().cats[i] == null && !set)
-                {
-                    globalvar.GetComponent<global_var>().cats[i] = cat;
-                    set = true;
-                }
-            }
-            cat.GetComponent<Rigidbody2D>().AddForce(new Vector2(80, 0));
-            
-        } else
-        {
-            set = false;
+            cat.GetComponent<controler>().global_var = globalvar;
+            cat.GetComponent<controler>().curentspawn = "more";
+            cat.GetComponent<Rigidbody2D>().AddForce(new Vector2(80, 0));   
         }
     }
 }
