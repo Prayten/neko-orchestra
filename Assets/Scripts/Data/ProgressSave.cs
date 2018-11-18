@@ -16,12 +16,18 @@ public class ProgressSave : MonoBehaviour {
 	void Start () {
         LLD = new LoadLvlData();
         lvlCollection = LLD.getLoad();
+        Convert();
 	}
 
     private void Convert()
     {
         string lvlname = SceneManager.GetActiveScene().name;
         NumLvl = int.Parse(lvlname.Substring(3));
+    }
+
+    public void setComplete()
+    {
+        lvlComplete = true;
     }
 
     private void OnApplicationQuit()

@@ -7,7 +7,14 @@ public class TimerController : MonoBehaviour
 
     public GameObject gameOver;
     public Text timerLabel;
-    public float lvlTime;
+    public GameObject lvlSettings;
+
+    private float lvlTime;
+
+    private void Start()
+    {
+        lvlTime = lvlSettings.GetComponent<LvlSettings>().getTimer();
+    }
 
     void Update()
     {

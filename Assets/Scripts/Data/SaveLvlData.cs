@@ -6,7 +6,7 @@ using System.IO;
 public class SaveLvlData : MonoBehaviour {
 
     //В процессе
-    private readonly string lvlPath = "C:\\Obmen\neko-orchestra\\Assets\\Data\\lvls.json";
+    private string lvlPath = "C:\\Obmen\\neko-orchestra\\Assets\\Data\\lvls.json";
 
     private void SaveLvl(LvlCollection lCol)
     {

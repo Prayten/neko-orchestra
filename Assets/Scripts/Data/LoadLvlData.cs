@@ -4,7 +4,7 @@ using System.IO;
 public class LoadLvlData{
 
     private LvlCollection lvlCollection;
-    private readonly string lvlPath = "C:\\Obmen\neko-orchestra\\Assets\\Data\\lvls.json";    
+    private string lvlPath = "C:\\Obmen\\neko-orchestra\\Assets\\Data\\lvls.json";    
     private void LoadLvls()
     {   
 
