@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\conductor.cs" />
     <Compile Include="Assets\Scripts\controler.cs" />
     <Compile Include="Assets\Scripts\Data\Fail\Configure.cs" />
     <Compile Include="Assets\Scripts\Data\Fail\Load.cs" />
@@ -73,14 +74,12 @@
     <Compile Include="Assets\Scripts\Data\LvlData.cs" />
     <Compile Include="Assets\Scripts\Data\ProgressSave.cs" />
     <Compile Include="Assets\Scripts\Data\SaveLvlData.cs" />
-    <Compile Include="Assets\Scripts\dirihore.cs" />
-    <Compile Include="Assets\Scripts\global_var.cs" />
+    <Compile Include="Assets\Scripts\globar_var.cs" />
     <Compile Include="Assets\Scripts\LvlSettings.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\MenuLevelController.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\ProgressLvl.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\TimerController.cs" />
-    <Compile Include="Assets\Scripts\pointcon.cs" />
     <Compile Include="Assets\Scripts\SimpleSpawnController.cs" />
     <Compile Include="Assets\Scripts\SpawnController.cs" />
     <Reference Include="UnityEditor.StandardEvents">

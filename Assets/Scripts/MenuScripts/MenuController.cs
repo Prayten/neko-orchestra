@@ -18,7 +18,7 @@ public class MenuController : MonoBehaviour {
         menu.onClick.AddListener(TaskOnClickExit);
         menu.onClick.AddListener(TaskOnClickLoadLvl1);
         menu.onClick.AddListener(TaskOnClickLoadLvl2);
-        menu.onClick.AddListener(TaskOnClickLoadLvl3);
+        /*menu.onClick.AddListener(TaskOnClickLoadLvl3);
         menu.onClick.AddListener(TaskOnClickLoadLvl4);
         menu.onClick.AddListener(TaskOnClickLoadLvl5);
         menu.onClick.AddListener(TaskOnClickLoadLvl6);
@@ -26,7 +26,7 @@ public class MenuController : MonoBehaviour {
         menu.onClick.AddListener(TaskOnClickLoadLvl8);
         menu.onClick.AddListener(TaskOnClickLoadLvl9);
         menu.onClick.AddListener(TaskOnClickLoadLvl10);
-        menu.onClick.AddListener(TaskOnClickLoadExtraLvl);
+        menu.onClick.AddListener(TaskOnClickLoadExtraLvl);*/
         #endregion
     }
 

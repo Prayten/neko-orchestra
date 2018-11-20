@@ -13,19 +13,12 @@ public class SpawnController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Time.frameCount % 60 == 0){
+            if (Time.frameCount % 60 == 0){
 
             GameObject cat = Instantiate(cats[Random.Range(0,cats.Length)], Spawn.transform);
             cat.transform.parent = null;
-            for (int i = 0; i < globalvar.GetComponent<global_var>().cats.Length; i++)
-            {
-                if (globalvar.GetComponent<global_var>().cats[i] == null && !set)
-                {
-                    globalvar.GetComponent<global_var>().cats[i] = cat;
-                    set = true;
-                }
-            }
+            cat.GetComponent<controler>().globar_var = globalvar;
+
             cat.GetComponent<Rigidbody2D>().AddForce(new Vector2(80, 0));
             
         } else

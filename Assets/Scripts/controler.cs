@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class controler : MonoBehaviour{
+
+    public GameObject globar_var;
     public Animator animator;
     public bool cat_sleep;
-    public bool losepoint;
-    public bool addpoint;
-
+    
     private float speed;
     private bool isFacingRight;
     private bool active;
@@ -19,20 +19,15 @@ public class controler : MonoBehaviour{
         cat_sleep = false;
         isFacingRight = true;
     }
-    //updete per frame
+
     void Update(){
-        addpoint = false;
-        losepoint = false;
         if (Time.frameCount % 60 == 0 && !cat_sleep && !random){
-            if (Random.Range(1, 11) == 1) {
+            if (Random.Range(1, 2) == 1) {
                 animator.SetTrigger("sleep");
                 cat_sleep = true;
+
+                globar_var.GetComponent<globar_var>().cat_counter += 1;
             }
-        }
-        if (active)
-        {
-            cat_sleep = false;
-            Destroy(gameObject);
         }
     }
 
@@ -42,7 +37,7 @@ public class controler : MonoBehaviour{
             animator.SetTrigger("poof");
             animator.SetTrigger("timer");
             cat_sleep = false;
-            addpoint = true;
+            globar_var.GetComponent<globar_var>().score += 1;
         }
     }
 
@@ -57,7 +52,7 @@ public class controler : MonoBehaviour{
             if (cat_sleep)
             {
                 cat_sleep = false;
-                losepoint = true;
+                
             }
             active = true;
         }

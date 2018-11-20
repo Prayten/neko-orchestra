@@ -47,6 +47,7 @@ public class LvlSettings : MonoBehaviour {
         score = scorePlus;
     }
 
+    //Выдает очки, необходимые для окончания уровня
     public int getScore()
     {
         return neededScore;

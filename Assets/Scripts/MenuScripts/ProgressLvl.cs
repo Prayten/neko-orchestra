@@ -13,12 +13,12 @@ public class ProgressLvl : MonoBehaviour {
 	private void Start () {
         LLD = new LoadLvlData();
         lvlCollection = LLD.getLoad();   //Получаем данные об уровнях
-        for(int i = 1; i < lvlCollection.lvls.Length - 1; i++)
+        for(int i = 1; i <= lvlCollection.lvls.Length - 1; i++)
         {
             // Проверяем, какие уровни пройдены, включаем нужные кнопки загрузки уровней
             if(lvlCollection.lvls[i].progress)
             {
-                BLoadLvl[i+1].SetActive(true);
+                BLoadLvl[i].SetActive(true);
             }
         }
 	}  
