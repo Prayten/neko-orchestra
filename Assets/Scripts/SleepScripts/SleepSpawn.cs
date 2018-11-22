@@ -14,11 +14,8 @@ public class SleepSpawn : MonoBehaviour
 
     void Update()
     {
-        if(Time.frameCount % 60 == 0)
+        if(Time.frameCount % 60 == 0 && Time.timeScale > 0)
         {
-
-
-            Debug.Log("Start SleepSpawn");
             GameObject cat = Instantiate(sleepCat, sleepSpawn.transform);
             cat.transform.parent = null;
 

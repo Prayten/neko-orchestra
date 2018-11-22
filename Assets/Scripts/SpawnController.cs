@@ -8,11 +8,13 @@ public class SpawnController : MonoBehaviour
     public GameObject Spawn;
     public GameObject[] cats = new GameObject[5];
 
+    private int cat_counter;
     private bool set;
     
     // Update is called once per frame
     void Update()
     {
+            globalvar.GetComponent<globar_var>().cat_counter += cat_counter;
             if (Time.frameCount % 60 == 0){
 
             GameObject cat = Instantiate(cats[Random.Range(0,cats.Length)], Spawn.transform);

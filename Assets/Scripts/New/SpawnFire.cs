@@ -5,17 +5,24 @@ using UnityEngine;
 public class SpawnFire : MonoBehaviour {
 
     public GameObject fire;
-    public GameObject spawnFire;
-	
-	
-	
-	// Update is called once per frame
-	void Update () {
-		if(Time.frameCount % 60 == 0)
+
+    private int minspeedX = 50;
+    private int maxspeedX = 50;
+    private int minspeedY = 300;
+    private int maxspeedY = 300;
+
+    // Update is called once per frame
+    void Update () {
+		if(Time.frameCount % 60 == 0 && Random.Range(0, 3) == 1 && Time.timeScale > 0)
         {
-            GameObject gfire = Instantiate(fire, spawnFire.transform);
+            GameObject gfire = Instantiate(fire, gameObject.transform);
             gfire.transform.parent = null;
-            gfire.GetComponent<Rigidbody2D>().AddForce(new Vector2(150, 150));
-        }
+            if (gameObject.transform.position.x < 0)
+            {
+                gfire.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(minspeedX, maxspeedX), Random.Range(minspeedY, maxspeedY)));
+            }
+            else
+                gfire.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-minspeedX, -maxspeedX), Random.Range(minspeedY, maxspeedY)));
+        }   
 	}
 }
