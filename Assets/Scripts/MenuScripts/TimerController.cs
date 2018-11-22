@@ -13,12 +13,12 @@ public class TimerController : MonoBehaviour
 
     void Update()
     {
-        if(lvlTime <= 0 && globa_var.GetComponent<global_var>().score < scoremin)
+        if(lvlTime <= 0 && globa_var.GetComponent<Global_var>().score < scoremin)
         {
             Time.timeScale = 0;
             gameOver.SetActive(true);
         }
-        if (lvlTime <= 0 && globa_var.GetComponent<global_var>().score >= scoremin)
+        if (lvlTime <= 0 && globa_var.GetComponent<Global_var>().score >= scoremin)
         {
             Time.timeScale = 0;
             gameOver.SetActive(true);

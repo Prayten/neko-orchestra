@@ -2,61 +2,49 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class controler : MonoBehaviour{
+public class Controler : MonoBehaviour{
 
     public GameObject global_var;
-    public Animator animator;
     public bool inTeam;
     public string curentspawn;
 
     private bool cat_sleep;
     private float speed;
     private bool isFacingRight;
-    private bool one_time;
 
     private void Start()
     {
         speed = 80;
         cat_sleep = false;
         isFacingRight = true;
+        if (curentspawn == "more") {
+            if (Random.Range(1, 11) == 1){
+                GetComponent<Animator>().SetTrigger("sleep");
+                GetComponent<Controler>().cat_sleep = true;
+                global_var.GetComponent<Global_var>().cat_counter += 1;
+            }
+        }
     }
     //updete per frame
     void Update(){
-        if (curentspawn == "simple")
-        {
-            if (Time.frameCount % 60 == 0 && !cat_sleep)
-            {
-                if (Random.Range(1, 11) == 1)
-                {
-                    animator.SetTrigger("sleep");
-                    cat_sleep = true;
-                    global_var.GetComponent<global_var>().cat_counter += 1;
+        if (curentspawn == "simple"){
+            if (Time.frameCount % 60 == 0 && !cat_sleep){
+                if (Random.Range(1, 11) == 1){
+                    GetComponent<Animator>().SetTrigger("sleep");
+                    GetComponent<Controler>().cat_sleep = true;
+                    global_var.GetComponent<Global_var>().cat_counter += 1;
                 }
-            }
-        }
-        if (curentspawn == "more")
-        {
-            if (!one_time)
-            {
-                if (Random.Range(1, 11) == 1)
-                {
-                    animator.SetTrigger("sleep");
-                    cat_sleep = true;
-                    global_var.GetComponent<global_var>().cat_counter += 1;
-                }
-                one_time = true;
             }
         }
     }
 
     //check
     void OnMouseDown(){
-        if (cat_sleep){
-            animator.SetTrigger("poof");
-            animator.SetTrigger("timer");
+        if (cat_sleep && Time.timeScale > 0){
+            GetComponent<Animator>().SetTrigger("poof");
             cat_sleep = false;
-            global_var.GetComponent<global_var>().cat_counter -= 1;
-            global_var.GetComponent<global_var>().score += 1;
+            global_var.GetComponent<Global_var>().cat_counter -= 1;
+            global_var.GetComponent<Global_var>().score += 1;
         }
     }
 
@@ -65,8 +53,8 @@ public class controler : MonoBehaviour{
         {
             if (cat_sleep)
             {
-                global_var.GetComponent<global_var>().cat_counter -= 1;
-                global_var.GetComponent<global_var>().score -= 1;
+                global_var.GetComponent<Global_var>().cat_counter -= 1;
+                global_var.GetComponent<Global_var>().score -= 1;
             }
             Destroy(gameObject);
         }
@@ -89,6 +77,6 @@ public class controler : MonoBehaviour{
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
-        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(speed * f, 0));
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(speed * f, 0));
     }
 }

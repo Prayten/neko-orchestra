@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class cat_pick : MonoBehaviour {
+public class Cat_pick : MonoBehaviour {
 
     public int cat_count;
     public GameObject[] cats;
@@ -27,53 +27,53 @@ public class cat_pick : MonoBehaviour {
     public void TaskOnClicktakecat1()
     {
         cat_count += 1;
-        cats[0].GetComponent<controler>().inTeam = true;
+        cats[0].GetComponent<Controler>().inTeam = true;
     }
     public void TaskOnClicktakecat1_1()
     {
         cat_count -= 1;
-        cats[0].GetComponent<controler>().inTeam = false;
+        cats[0].GetComponent<Controler>().inTeam = false;
 
     }
     public void TaskOnClicktakecat2()
     {
         cat_count += 1;
-        cats[1].GetComponent<controler>().inTeam = true;
+        cats[1].GetComponent<Controler>().inTeam = true;
     }
     public void TaskOnClicktakecat2_1()
     {
         cat_count -= 1;
-        cats[1].GetComponent<controler>().inTeam = false;
+        cats[1].GetComponent<Controler>().inTeam = false;
     }
     public void TaskOnClicktakecat3()
     {
         cat_count += 1;
-        cats[2].GetComponent<controler>().inTeam = true;
+        cats[2].GetComponent<Controler>().inTeam = true;
     }
     public void TaskOnClicktakecat3_1()
     {
         cat_count -= 1;
-        cats[2].GetComponent<controler>().inTeam = false;
+        cats[2].GetComponent<Controler>().inTeam = false;
     }
     public void TaskOnClicktakecat4()
     {
         cat_count += 1;
-        cats[3].GetComponent<controler>().inTeam = true;
+        cats[3].GetComponent<Controler>().inTeam = true;
     }
     public void TaskOnClicktakecat4_1()
     {
         cat_count -= 1;
-        cats[3].GetComponent<controler>().inTeam = false;
+        cats[3].GetComponent<Controler>().inTeam = false;
     }
     public void TaskOnClicktakecat5()
     {
         cat_count += 1;
-        cats[4].GetComponent<controler>().inTeam = true;
+        cats[4].GetComponent<Controler>().inTeam = true;
     }
     public void TaskOnClicktakecat5_1()
     {
         cat_count -= 1;
-        cats[4].GetComponent<controler>().inTeam = false;
+        cats[4].GetComponent<Controler>().inTeam = false;
     }
     private void Update()
     {

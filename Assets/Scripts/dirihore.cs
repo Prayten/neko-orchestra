@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class dirihore : MonoBehaviour {
     public GameObject o_globalvar;
-    public Animator anim;
-
     private void Update()
     {
-        anim.SetInteger("cat", o_globalvar.GetComponent<global_var>().cat_counter);
+        gameObject.GetComponent<Animator>().SetInteger("cat", o_globalvar.GetComponent<Global_var>().cat_counter);
 }
 
 }

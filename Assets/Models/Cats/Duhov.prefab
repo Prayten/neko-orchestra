@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1136688736775688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -118,8 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 871f20b29afd8d14f9cabb2b9931b6ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diri: {fileID: 1716381544933736, guid: c2111c4d9f1b1c84d844e1c22177672d, type: 2}
-  animator: {fileID: 95648097031976942}
+  global_var: {fileID: 1956390744771806, guid: 518ea0cf62e04524fab711aaa0cc52e9, type: 2}
+  inTeam: 0
+  curentspawn: 
 --- !u!212 &212667905920798958
 SpriteRenderer:
   m_ObjectHideFlags: 1
