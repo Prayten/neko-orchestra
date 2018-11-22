@@ -12,16 +12,13 @@ public class globar_var : MonoBehaviour
     public LvlSettings lvlSettings;
     public Text text;
 
-    private void Start()
-    {
-        score = 0;
-        cat_counter = 0;
-    }
+    
 
     private void Update()
     {
         text.text = "Score: " + score.ToString();
         lvlSettings.GetComponent<LvlSettings>().setScore(score);
+        Debug.Log("Cat Counter = " + cat_counter);
     }
 
 }

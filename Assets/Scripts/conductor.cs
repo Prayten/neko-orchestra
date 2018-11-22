@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class conductor : MonoBehaviour {
-    public Animator anim;
-    
-    private int counter;
 
+    public globar_var cat_counter;
+    private int counter;
     private void Update()
     {
-        anim.SetInteger("cat", counter);
+        counter = cat_counter.GetComponent<globar_var>().cat_counter;
+        this.GetComponent<Animator>().SetInteger("cat", counter);
     }
 
 }
