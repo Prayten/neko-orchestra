@@ -199,22 +199,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1337958339919770
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4823565994170642}
-  - component: {fileID: 114648954058860106}
-  m_Layer: 0
-  m_Name: Settings
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1353177301810980
 GameObject:
   m_ObjectHideFlags: 1
@@ -315,6 +299,8 @@ GameObject:
   - component: {fileID: 114471895122626886}
   - component: {fileID: 114539668378356678}
   - component: {fileID: 114764988774491830}
+  - component: {fileID: 114197743421669534}
+  - component: {fileID: 114236784779953128}
   m_Layer: 5
   m_Name: UserInterface
   m_TagString: Untagged
@@ -461,19 +447,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4823565994170642
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1337958339919770}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -640, y: -360, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224253553082352090}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &61722269622033426
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -714,6 +687,35 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114197743421669534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1495221390987708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b6bbe4a00721234693e692759982e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Victory: {fileID: 1206820667860232}
+  timer: 30
+  neededScore: 5
+--- !u!114 &114236784779953128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1495221390987708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072dd94c6298b784d9c9435e11fbe585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  cat_counter: 48
+  lvlSettings: {fileID: 114197743421669534}
+  text: {fileID: 114255578790801864}
 --- !u!114 &114255578790801864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1316,20 +1318,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Continue
---- !u!114 &114648954058860106
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1337958339919770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b6bbe4a00721234693e692759982e4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Victory: {fileID: 1206820667860232}
-  timer: 5
-  neededScore: 1
 --- !u!114 &114660877159142292
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1403,7 +1391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: {fileID: 1209460922858814}
   timerLabel: {fileID: 114462477509767412}
-  lvlSettings: {fileID: 1337958339919770}
+  lvlSettings: {fileID: 1495221390987708}
 --- !u!114 &114748187345867478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2032,7 +2020,6 @@ RectTransform:
   - {fileID: 224193629538826208}
   - {fileID: 224136612940201794}
   - {fileID: 224987984152728790}
-  - {fileID: 4823565994170642}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

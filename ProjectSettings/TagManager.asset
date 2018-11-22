@@ -8,6 +8,7 @@ TagManager:
   - Cat
   - dead
   - ran
+  - Cherry
   layers:
   - Default
   - TransparentFX

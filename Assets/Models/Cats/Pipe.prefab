@@ -118,8 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 871f20b29afd8d14f9cabb2b9931b6ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diri: {fileID: 1716381544933736, guid: c2111c4d9f1b1c84d844e1c22177672d, type: 2}
+  globar_var: {fileID: 1495221390987708, guid: 702a9843f177a1543aab0e3fd0634a64, type: 2}
   animator: {fileID: 95057610743317702}
+  cat_sleep: 0
 --- !u!212 &212667148880110994
 SpriteRenderer:
   m_ObjectHideFlags: 1

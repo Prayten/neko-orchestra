@@ -9,64 +9,61 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1964539018703068}
+  m_RootGameObject: {fileID: 1042794776623556}
   m_IsPrefabAsset: 1
---- !u!1 &1964539018703068
+--- !u!1 &1042794776623556
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4204498498398970}
-  - component: {fileID: 114493181442322674}
-  - component: {fileID: 114654783052157568}
+  - component: {fileID: 4439052187858656}
+  - component: {fileID: 58784440840957768}
+  - component: {fileID: 114616659269219192}
   m_Layer: 0
-  m_Name: New Prefab
+  m_Name: SleepPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4204498498398970
+--- !u!4 &4439052187858656
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1964539018703068}
+  m_GameObject: {fileID: 1042794776623556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 630.1691, y: 317.9035, z: -3.5}
+  m_LocalPosition: {x: -1.639, y: -0.494, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114493181442322674
+--- !u!58 &58784440840957768
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1042794776623556}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.07718554
+--- !u!114 &114616659269219192
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1964539018703068}
+  m_GameObject: {fileID: 1042794776623556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b6bbe4a00721234693e692759982e4a, type: 3}
+  m_Script: {fileID: 11500000, guid: 26c9906c4e6af1945a58750766e6a562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Victory: {fileID: 0}
-  timer: 15
-  neededScore: 10
---- !u!114 &114654783052157568
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1964539018703068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 072dd94c6298b784d9c9435e11fbe585, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  cat_counter: 0
-  lvlSettings: {fileID: 0}
-  text: {fileID: 0}
