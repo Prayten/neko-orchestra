@@ -15,9 +15,9 @@ public class SpawnFire : MonoBehaviour {
     void Update () {
 		if(Time.frameCount % 60 == 0 && Random.Range(0, 3) == 1 && Time.timeScale > 0)
         {
-            GameObject gfire = Instantiate(fire, gameObject.transform);
+            GameObject gfire = Instantiate(fire, transform);
             gfire.transform.parent = null;
-            if (gameObject.transform.position.x < 0)
+            if (transform.position.x < 0)
             {
                 gfire.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(minspeedX, maxspeedX), Random.Range(minspeedY, maxspeedY)));
             }

@@ -88,6 +88,8 @@
     <Compile Include="Assets\Scripts\SleepScripts\SleepPoint.cs" />
     <Compile Include="Assets\Scripts\SleepScripts\SleepSpawn.cs" />
     <Compile Include="Assets\Scripts\SpawnController.cs" />
+    <Compile Include="Assets\Scripts\Test\GetSet.cs" />
+    <Compile Include="Assets\Scripts\Test\NewBehaviourScript.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Obmen/neko-orchestra/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SleepSpawn : MonoBehaviour
 {
-    public GameObject sleepSpawn;
+   
     public GameObject sleepCat;
 
     private int speed = 30;
@@ -16,22 +16,22 @@ public class SleepSpawn : MonoBehaviour
     {
         if(Time.frameCount % 60 == 0 && Time.timeScale > 0)
         {
-            GameObject cat = Instantiate(sleepCat, sleepSpawn.transform);
+            GameObject cat = Instantiate(sleepCat, transform);
             cat.transform.parent = null;
 
-            if (sleepSpawn.transform.position.x < 0 && sleepSpawn.transform.position.y < 0)
+            if (transform.position.x < 0 && transform.position.y < 0)
             {
                 cat.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(speed, degree), Random.Range(speed, degree)));
             }
-            else if(sleepSpawn.transform.position.x > 0 && sleepSpawn.transform.position.y < 0)
+            else if(transform.position.x > 0 && transform.position.y < 0)
             {
                 cat.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-speed, -degree), Random.Range(speed, degree)));
             }
-            else if (sleepSpawn.transform.position.x > 0 && sleepSpawn.transform.position.y > 0)
+            else if (transform.position.x > 0 && transform.position.y > 0)
             {
                 cat.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-speed, -degree), Random.Range(-speed, -degree)));
             }
-            else if (sleepSpawn.transform.position.x < 0 && sleepSpawn.transform.position.y > 0)
+            else if (transform.position.x < 0 && transform.position.y > 0)
             {
                 cat.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(speed, degree), Random.Range(-speed, -degree)));
             }

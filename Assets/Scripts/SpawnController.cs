@@ -5,7 +5,8 @@ using UnityEngine;
 public class SpawnController : MonoBehaviour
 {
     public GameObject globalvar;
-    public GameObject Spawn;
+    
+    [HideInInspector]
     public GameObject[] cats = new GameObject[5];
 
     private int cat_counter;
@@ -17,10 +18,8 @@ public class SpawnController : MonoBehaviour
             globalvar.GetComponent<globar_var>().cat_counter += cat_counter;
             if (Time.frameCount % 60 == 0){
 
-            GameObject cat = Instantiate(cats[Random.Range(0,cats.Length)], Spawn.transform);
-            cat.transform.parent = null;
+            GameObject cat = Instantiate(cats[Random.Range(0,cats.Length)], transform);
             cat.GetComponent<controler>().globar_var = globalvar;
-
             cat.GetComponent<Rigidbody2D>().AddForce(new Vector2(80, 0));
             
         } else

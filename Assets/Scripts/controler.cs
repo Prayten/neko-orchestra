@@ -5,7 +5,7 @@ using UnityEngine;
 public class controler : MonoBehaviour{
 
     public GameObject globar_var;
-    public Animator animator;
+    
     public bool cat_sleep;
     
     private float speed;
@@ -23,7 +23,7 @@ public class controler : MonoBehaviour{
     void Update(){
         if (Time.frameCount % 60 == 0 && !cat_sleep && !random){
             if (Random.Range(1, 2) == 1) {
-                animator.SetTrigger("sleep");
+                GetComponent<Animator>().SetTrigger("sleep");
                 cat_sleep = true;
 
                 globar_var.GetComponent<globar_var>().cat_counter += 1;
@@ -34,8 +34,8 @@ public class controler : MonoBehaviour{
     //check
     void OnMouseDown(){
         if (cat_sleep){
-            animator.SetTrigger("poof");
-            animator.SetTrigger("timer");
+            GetComponent<Animator>().SetTrigger("poof");
+            GetComponent<Animator>().SetTrigger("timer");
             cat_sleep = false;
             globar_var.GetComponent<globar_var>().score += 1;
         }
