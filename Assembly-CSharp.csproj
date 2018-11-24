@@ -64,12 +64,16 @@
     <Compile Include="Assets\Scripts\Controler.cs" />
     <Compile Include="Assets\Scripts\dirihore.cs" />
     <Compile Include="Assets\Scripts\Global_var.cs" />
+    <Compile Include="Assets\Scripts\HubSpawn.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\Cat_pick.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\MenuLevelController.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\TimerController.cs" />
+    <Compile Include="Assets\Scripts\MoreSleep.cs" />
+    <Compile Include="Assets\Scripts\OneSleep.cs" />
     <Compile Include="Assets\Scripts\Path.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
+    <Compile Include="Assets\Scripts\ScreenOrentation.cs" />
     <Compile Include="Assets\Scripts\SimpleSpawnController.cs" />
     <Compile Include="Assets\Scripts\SpawnController.cs" />
     <Reference Include="UnityEditor.StandardEvents">

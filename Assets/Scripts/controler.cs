@@ -6,9 +6,9 @@ public class Controler : MonoBehaviour{
 
     public GameObject global_var;
     public bool inTeam;
-    public string curentspawn;
+    public bool cat_sleep;
+    public bool spawned;
 
-    private bool cat_sleep;
     private float speed;
     private bool isFacingRight;
 
@@ -17,27 +17,7 @@ public class Controler : MonoBehaviour{
         speed = 80;
         cat_sleep = false;
         isFacingRight = true;
-        if (curentspawn == "more") {
-            if (Random.Range(1, 11) == 1){
-                GetComponent<Animator>().SetTrigger("sleep");
-                GetComponent<Controler>().cat_sleep = true;
-                global_var.GetComponent<Global_var>().cat_counter += 1;
-            }
-        }
     }
-    //updete per frame
-    void Update(){
-        if (curentspawn == "simple"){
-            if (Time.frameCount % 60 == 0 && !cat_sleep){
-                if (Random.Range(1, 11) == 1){
-                    GetComponent<Animator>().SetTrigger("sleep");
-                    GetComponent<Controler>().cat_sleep = true;
-                    global_var.GetComponent<Global_var>().cat_counter += 1;
-                }
-            }
-        }
-    }
-
     //check
     void OnMouseDown(){
         if (cat_sleep && Time.timeScale > 0){

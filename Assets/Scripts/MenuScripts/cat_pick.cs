@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Cat_pick : MonoBehaviour {
 
     public int cat_count;
+    public GameObject spawn;
     public GameObject[] cats;
     public GameObject cont;
     public Button cat;
@@ -22,6 +23,7 @@ public class Cat_pick : MonoBehaviour {
         cat.onClick.AddListener(TaskOnClicktakecat3_1);
         cat.onClick.AddListener(TaskOnClicktakecat4_1);
         cat.onClick.AddListener(TaskOnClicktakecat5_1);
+        cat.onClick.AddListener(TaskOnClicktakeconti);
     }
 
     public void TaskOnClicktakecat1()
@@ -75,10 +77,13 @@ public class Cat_pick : MonoBehaviour {
         cat_count -= 1;
         cats[4].GetComponent<Controler>().inTeam = false;
     }
+    public void TaskOnClicktakeconti()
+    {
+        spawn.GetComponent<HubSpawn>().kill = true;
+    }
     private void Update()
     {
-        if (cat_count > 2)
-        {
+        if (cat_count > 2){
             cont.SetActive(true);
         } else { cont.SetActive(false); }
     }

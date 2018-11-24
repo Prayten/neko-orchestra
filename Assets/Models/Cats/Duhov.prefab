@@ -120,7 +120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   global_var: {fileID: 1956390744771806, guid: 518ea0cf62e04524fab711aaa0cc52e9, type: 2}
   inTeam: 0
-  curentspawn: 
+  cat_sleep: 0
+  spawned: 1
 --- !u!212 &212667905920798958
 SpriteRenderer:
   m_ObjectHideFlags: 1
