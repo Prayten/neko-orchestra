@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c02be34f1edb49b46bf67a8a8a71893f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalvar: {fileID: 1956390744771806, guid: 518ea0cf62e04524fab711aaa0cc52e9, type: 2}
   Spawn: {fileID: 1901534179650120}
   cats:
   - {fileID: 1136688736775688, guid: 85a80ca5626266e47b4ee53820ab2f62, type: 2}

@@ -6,6 +6,8 @@ public class TimerController : MonoBehaviour
 {
 
     public GameObject gameOver;
+    public GameObject globa_var;
+    public int scoremin;
     public Text timerLabel;
     public GameObject lvlSettings;
 
@@ -19,11 +21,17 @@ public class TimerController : MonoBehaviour
 
     void Update()
     {
-        if(lvlTime <= 0)
+        if(lvlTime <= 0 && globa_var.GetComponent<Global_var>().score < scoremin)
         {
             Time.timeScale = 0;
             gameOver.SetActive(true);
         }
+        if (lvlTime <= 0 && globa_var.GetComponent<Global_var>().score >= scoremin)
+        {
+            Time.timeScale = 0;
+            gameOver.SetActive(true);
+        }
+
         lvlTime -= Time.deltaTime;
 
         var minutes = lvlTime / 60; //Divide the guiTime by sixty to get the minutes.

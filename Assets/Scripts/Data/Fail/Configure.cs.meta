@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scripts/Data/Fail/Configure.cs.meta
 guid: e36ff5e3df367324ab48fe86f1922fad
+=======
+guid: 901595d854377644d89c717e1515a62c
+>>>>>>> nikif:Assets/Scripts/global_var.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

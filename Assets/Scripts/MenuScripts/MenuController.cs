@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour {
 
     public int count = 0;
+<<<<<<< HEAD
 
     public Button menu;
 
@@ -28,6 +29,23 @@ public class MenuController : MonoBehaviour {
         menu.onClick.AddListener(TaskOnClickLoadLvl10);
         menu.onClick.AddListener(TaskOnClickLoadExtraLvl);*/
         #endregion
+=======
+    public Button startMenu;
+
+    // Use this for initialization
+    void Start () {
+
+        //Main Menu buttons
+        startMenu.onClick.AddListener(TaskOnClickStart);
+        startMenu.onClick.AddListener(TaskOnClickExit);
+        startMenu.onClick.AddListener(TaskOnClickAchieveMenu);
+        startMenu.onClick.AddListener(TaskOnClickLoadLvlMenu);
+
+        startMenu.onClick.AddListener(TaskOnClickLoadLvl1);
+        startMenu.onClick.AddListener(TaskOnClickLoadLvl2);
+        startMenu.onClick.AddListener(TaskOnClickLoadLvl3);
+        startMenu.onClick.AddListener(TaskOnClickLoadExtraLvl);
+>>>>>>> nikif
     }
 
     public void TaskOnClickStart()

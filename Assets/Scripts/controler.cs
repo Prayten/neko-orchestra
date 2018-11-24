@@ -2,7 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+<<<<<<< HEAD
 public class controler : MonoBehaviour{
+=======
+public class Controler : MonoBehaviour{
+
+    public GameObject global_var;
+    public bool inTeam;
+    public bool cat_sleep;
+    public bool spawned;
+>>>>>>> nikif
 
     public GameObject globar_var;
     
@@ -10,8 +19,6 @@ public class controler : MonoBehaviour{
     
     private float speed;
     private bool isFacingRight;
-    private bool active;
-    private bool random;
 
     private void Start()
     {
@@ -19,6 +26,7 @@ public class controler : MonoBehaviour{
         cat_sleep = false;
         isFacingRight = true;
     }
+<<<<<<< HEAD
 
     void Update(){
         if (Time.frameCount % 60 == 0 && !cat_sleep && !random){
@@ -38,23 +46,32 @@ public class controler : MonoBehaviour{
             GetComponent<Animator>().SetTrigger("timer");
             cat_sleep = false;
             globar_var.GetComponent<globar_var>().score += 1;
+=======
+    //check
+    void OnMouseDown(){
+        if (cat_sleep && Time.timeScale > 0){
+            GetComponent<Animator>().SetTrigger("poof");
+            cat_sleep = false;
+            global_var.GetComponent<Global_var>().cat_counter -= 1;
+            global_var.GetComponent<Global_var>().score += 1;
+>>>>>>> nikif
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("ran"))
-        {
-            random = true;
-        }
-
         if (collision.gameObject.CompareTag("dead"))
         {
             if (cat_sleep)
             {
+<<<<<<< HEAD
                 cat_sleep = false;
                 
+=======
+                global_var.GetComponent<Global_var>().cat_counter -= 1;
+                global_var.GetComponent<Global_var>().score -= 1;
+>>>>>>> nikif
             }
-            active = true;
+            Destroy(gameObject);
         }
 
         if (collision.gameObject.CompareTag("Fliper")){ 
@@ -75,6 +92,6 @@ public class controler : MonoBehaviour{
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
-        this.GetComponent<Rigidbody2D>().AddForce(new Vector2(speed * f, 0));
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(speed * f, 0));
     }
 }

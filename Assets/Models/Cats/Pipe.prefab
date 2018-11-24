@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1314964788837166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -118,9 +118,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 871f20b29afd8d14f9cabb2b9931b6ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   globar_var: {fileID: 1495221390987708, guid: 702a9843f177a1543aab0e3fd0634a64, type: 2}
   animator: {fileID: 95057610743317702}
   cat_sleep: 0
+=======
+  global_var: {fileID: 1956390744771806, guid: 518ea0cf62e04524fab711aaa0cc52e9, type: 2}
+  inTeam: 1
+  cat_sleep: 0
+  spawned: 1
+>>>>>>> nikif
 --- !u!212 &212667148880110994
 SpriteRenderer:
   m_ObjectHideFlags: 1
