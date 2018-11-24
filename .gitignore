@@ -1,3 +1,7 @@
+.vs*
+Library/*
+.meta*
+Temp/*
 
 Assets/Data.meta
 Assembly-CSharp.csproj
