@@ -1,2 +1,0 @@
-C:\Users\User\Documents\GitHub\neko-orchestra\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
-C:\Users\User\Documents\GitHub\neko-orchestra\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
