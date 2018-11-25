@@ -170,3 +170,7 @@ C:\developer\neko-orchestra\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.c
 C:\developer\neko-orchestra\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\developer\neko-orchestra\obj\Debug\Assembly-CSharp.dll
 C:\developer\neko-orchestra\obj\Debug\Assembly-CSharp.pdb
+C:\Obmen\neko-orchestra\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Obmen\neko-orchestra\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+C:\Obmen\neko-orchestra\obj\Debug\Assembly-CSharp.dll
+C:\Obmen\neko-orchestra\obj\Debug\Assembly-CSharp.pdb

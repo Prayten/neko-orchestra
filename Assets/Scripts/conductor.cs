@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class conductor : MonoBehaviour {
 
-    public globar_var cat_counter;
+    public global_var cat_counter;
     private int counter;
     private void Update()
     {
-        counter = cat_counter.GetComponent<globar_var>().cat_counter;
-        this.GetComponent<Animator>().SetInteger("cat", counter);
+        //counter = cat_counter.GetComponent<global_var>().cat_counter;
+        GetComponent<Animator>().SetInteger("cat", counter);
     }
 
 }

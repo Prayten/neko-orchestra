@@ -9,7 +9,7 @@ public class MoreSleep : MonoBehaviour {
             if (Random.Range(1, 11) == 1){
                 GetComponent<Animator>().SetTrigger("sleep");
                 GetComponent<Controler>().cat_sleep = true;
-                GetComponent<Controler>().global_var.GetComponent<Global_var>().cat_counter += 1;
+                GetComponent<Controler>().globalvar.GetComponent<global_var>().cat_counter += 1;
             }
         }
     }

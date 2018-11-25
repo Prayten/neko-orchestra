@@ -5,6 +5,7 @@ using System.IO;
 
 public class LvlSettings : MonoBehaviour {
 
+    public global_var global_score;
     private int score;
     private bool end;
     private ProgressSave PS;
@@ -24,6 +25,7 @@ public class LvlSettings : MonoBehaviour {
 
     private void Update()
     {
+        //setScore(global_score.score);
         //Проверяет, выполнено ли условие уровня
         if(neededScore == score && !end)
         {
