@@ -1,5 +1,3 @@
-C:\Users\User\Documents\GitHub\neko-orchestra\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
-C:\Users\User\Documents\GitHub\neko-orchestra\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
 C:\developer\neko-orchestra\Temp\bin\Debug\Assembly-CSharp.dll
 C:\developer\neko-orchestra\Temp\bin\Debug\Assembly-CSharp.pdb
 C:\developer\neko-orchestra\Temp\bin\Debug\Boo.Lang.dll
