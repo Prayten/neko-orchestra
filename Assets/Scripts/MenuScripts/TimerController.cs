@@ -36,9 +36,9 @@ public class TimerController : MonoBehaviour
 
         var minutes = lvlTime / 60; //Divide the guiTime by sixty to get the minutes.
         var seconds = lvlTime % 60;//Use the euclidean division for the seconds.
-        var fraction = (lvlTime * 100) % 100;
+        
 
         //update the label value
-        timerLabel.text = string.Format("{0:00} : {1:00} : {2:000}", minutes, seconds, fraction);
+        timerLabel.text = string.Format("Время {0:00} : {1:00}", minutes, seconds);
     }
 }

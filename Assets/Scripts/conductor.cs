@@ -1,15 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class conductor : MonoBehaviour {
+public class Conductor : MonoBehaviour {
 
-    public global_var cat_counter;
-    private int counter;
-    private void Update()
-    {
-        //counter = cat_counter.GetComponent<global_var>().cat_counter;
-        GetComponent<Animator>().SetInteger("cat", counter);
-    }
+    public Data data;
+    private int rage;
+    
+	// Use this for initialization
+	void Start () {
+	    	
+	}
+	
+	// Update is called once per frame
+	void Update () {
 
+	}
 }

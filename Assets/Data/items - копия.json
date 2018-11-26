@@ -1,0 +1,9 @@
+{"items":[
+{"name": "shake","cost":50, "saled": false, "power": 1},
+{"name": "milk","cost":100, "saled": false, "power": 2},
+{"name": "dragon","cost":300, "saled": false, "power": 5},
+{"name": "bankai","cost":2000, "saled": false, "power": 20},
+{"name": "package","cost":200, "saled": false, "power": 4},
+{"name": "power1","cost":350, "saled": false, "power": 10},
+{"name": "power2","cost":250, "saled": false, "power": 10}
+],"collectionName":"items"}

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MenuLevelController : MonoBehaviour
 {
     public Button menuLvl;
-    
+    public Data data;
     // Use this for initialization
     void Start()
     {
@@ -55,8 +55,8 @@ public class MenuLevelController : MonoBehaviour
     void OnClickNextLvl()
     {
         //Нужно понять, как получить имя следующего уровня
-        //Debug.Log("Loading Next Lvl...");
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+        Debug.Log("Loading Next Lvl...");
+        SceneManager.LoadScene("lvl" + data.getNumLvl(), LoadSceneMode.Single);
     }
 
     void OnClickUnpause()

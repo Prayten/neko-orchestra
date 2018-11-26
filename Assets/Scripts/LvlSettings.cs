@@ -7,9 +7,11 @@ public class LvlSettings : MonoBehaviour {
 
     public global_var global_score;
     private int score;
+    private int stars;
     private bool end;
-    private ProgressSave PS;
+    
 
+    public Data data;
     public GameObject Victory;
 
     //Условия уровня, которые можно выставить в меню Unity
@@ -20,7 +22,7 @@ public class LvlSettings : MonoBehaviour {
 
     private void Start()
     {
-        PS = new ProgressSave();
+        
     }
 
     private void Update()
@@ -30,7 +32,7 @@ public class LvlSettings : MonoBehaviour {
         if(neededScore == score && !end)
         {
             Debug.Log("Условие уровня выполнено");
-            PS.setComplete();
+            data.setLvlData(data.getNumLvl(),score,stars,true);
             end = true;
             Time.timeScale = 0;
             Victory.SetActive(true);

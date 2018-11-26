@@ -20,5 +20,4 @@ public class SettingsData
         PlayerPrefs.SetFloat("MusicVolume", musicVolume);
         PlayerPrefs.SetFloat("GameVolume", gameVolume);
     }
-
 }

@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
+
+//Скрипт для главного меню, чтобы отображать кнопки загрузки доступных уровней
 
 public class ProgressLvl : MonoBehaviour {
 
     
-    private LvlCollection lvlCollection;
-    private LoadLvlData LLD;
-
     public GameObject[] BLoadLvl;
-    
+    public Data data;
+
+    private LvlCollection lvlCollection;
 	// Use this for initialization
 	private void Start () {
-        LLD = new LoadLvlData();
-        lvlCollection = LLD.getLoad();   //Получаем данные об уровнях
+
+        lvlCollection = data.getLvlCollection();
         for(int i = 1; i <= lvlCollection.lvls.Length - 1; i++)
         {
             // Проверяем, какие уровни пройдены, включаем нужные кнопки загрузки уровней
