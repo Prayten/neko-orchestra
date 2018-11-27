@@ -5,7 +5,7 @@ public class ShopData
 {
 
     private ItemCollection itemCollection;
-    private string itemPath = "C:\\Obmen\\neko-orchestra\\Assets\\Data\\items.json";
+    private string itemPath = Application.dataPath + "/Data/items.json";
 
     //Загрузка прогресса
     public ItemCollection LoadShopData()

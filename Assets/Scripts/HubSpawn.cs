@@ -10,7 +10,7 @@ public class HubSpawn : MonoBehaviour {
     {
         for (int i = 0; i < cats.Length; i++)
         {
-            cats[i].GetComponent<Controler>().spawned = false;
+            cats[i].GetComponent<CatController>().spawned = false;
         }
     }
 
@@ -19,9 +19,9 @@ public class HubSpawn : MonoBehaviour {
         kill = false;
         if (!kill){
             for (int i = 0; i < cats.Length; i++){
-                if (cats[i].GetComponent<Controler>().inTeam && !cats[i].GetComponent<Controler>().spawned){
+                if (cats[i].GetComponent<CatController>().inTeam && !cats[i].GetComponent<CatController>().spawned){
                     GameObject cat = Instantiate(cats[i], transform);
-                    cats[i].GetComponent<Controler>().spawned = true;
+                    cats[i].GetComponent<CatController>().spawned = true;
                 }
             }
         }

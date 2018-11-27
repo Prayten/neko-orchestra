@@ -1,17 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
-public class Conductor : MonoBehaviour {
+public class Conductor : MonoBehaviour
+{
+   
+    public RageValue rage;
 
-    public Data data;
-    private int rage;
-    
-	// Use this for initialization
-	void Start () {
-	    	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-	}
+    // Update is called once per frame
+    void Update()
+    {
+        GetComponent<Animator>().SetInteger("cat", (int)rage.GetComponent<Slider>().value);
+    }
 }

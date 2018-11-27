@@ -1,15 +1,17 @@
 ﻿using System.IO;
 using UnityEngine;
 
+
 public class LvlData{
 
 
     private LvlCollection lvlCollection;
 
-    private string lvlPath = "C:\\Obmen\\neko-orchestra\\Assets\\Data\\lvls.json";
+    private string lvlPath = Application.dataPath + "/Data/lvls.json";
 
     public LvlCollection LoadLvlData()
     {
+        Debug.Log(Application.dataPath + "/Data/lvls.json");
         using (StreamReader stream = new StreamReader(lvlPath)) // Считывает весь JSON в строку
         {
             string json = stream.ReadToEnd();

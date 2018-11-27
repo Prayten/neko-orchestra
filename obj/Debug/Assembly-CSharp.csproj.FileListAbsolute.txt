@@ -172,3 +172,5 @@ C:\Obmen\neko-orchestra\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
 C:\Obmen\neko-orchestra\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
 C:\Obmen\neko-orchestra\obj\Debug\Assembly-CSharp.dll
 C:\Obmen\neko-orchestra\obj\Debug\Assembly-CSharp.pdb
+C:\Users\User\Documents\GitHub\neko-orchestra\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\GitHub\neko-orchestra\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

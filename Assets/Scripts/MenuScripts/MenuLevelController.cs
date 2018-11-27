@@ -12,7 +12,7 @@ public class MenuLevelController : MonoBehaviour
     void Start()
     {
         #region AddListenerОбработчиковКнопок
-        //.onClick.AddListener(TaskOnClickUnpause);
+        menuLvl.onClick.AddListener(TaskOnClickUnpause);
         menuLvl.onClick.AddListener(TaskOnClickPause);
         menuLvl.onClick.AddListener(TaskOnClickQuit);
         menuLvl.onClick.AddListener(TaskOnClickRestart);

@@ -20,9 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4530170164688376}
   - component: {fileID: 212465067257142844}
-  - component: {fileID: 114595685507148750}
   - component: {fileID: 95599426734038750}
-  - component: {fileID: 114865347267430362}
+  - component: {fileID: 114222847155006524}
   m_Layer: 0
   m_Name: Conductor
   m_TagString: Untagged
@@ -61,7 +60,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114595685507148750
+--- !u!114 &114222847155006524
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,19 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06090cfe4d4bdc848b42a159d701768f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cat_counter: {fileID: 0}
---- !u!114 &114865347267430362
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1716381544933736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06090cfe4d4bdc848b42a159d701768f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cat_counter: {fileID: 0}
+  rage: {fileID: 0}
 --- !u!212 &212465067257142844
 SpriteRenderer:
   m_ObjectHideFlags: 1
