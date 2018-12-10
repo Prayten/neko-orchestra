@@ -16,7 +16,7 @@ public class ShopData
             itemCollection = JsonUtility.FromJson<ItemCollection>(json);
         }
         
-        Debug.Log("Levels loaded: " + itemCollection.items.Length);
+        Debug.Log("Items loaded: " + itemCollection.items.Length);
         return itemCollection;
     }
     //Сохранение прогресса
@@ -28,7 +28,7 @@ public class ShopData
             stream.Write(json);
         }
 
-        Debug.Log("Levels saved: " + iCol.items.Length);
+        Debug.Log("Items saved: " + iCol.items.Length);
     }
 
 

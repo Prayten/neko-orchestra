@@ -4,6 +4,9 @@ public class Data : MonoBehaviour {
 
     private ItemCollection itemCollection;
     private LvlCollection lvlCollection;
+    private FoodCollection foodCollection;
+
+    private FoodData foodD;
     private ShopData shopD;
     private SettingsData settingsD;
     private ProgressData progressD;
@@ -14,14 +17,21 @@ public class Data : MonoBehaviour {
 
     private void Start()
     {
+        foodD = new FoodData();
         lvlD = new LvlData();
         shopD = new ShopData();
         settingsD = new SettingsData();
         progressD = new ProgressData();
         LoadLvl();
         LoadShop();
+        LoadFood();
         Debug.Log("Data Start");
+    }
 
+    private void LoadFood()
+    {
+        foodCollection = foodD.LoadfoodData();
+        Debug.Log(foodCollection.ToString());
     }
 
     private void LoadLvl()
@@ -29,6 +39,7 @@ public class Data : MonoBehaviour {
         lvlCollection = lvlD.LoadLvlData();
         Debug.Log(lvlCollection.ToString());
     }
+  
 
     private void LoadShop()
     {
@@ -38,6 +49,7 @@ public class Data : MonoBehaviour {
 
     private void SaveData()
     {
+        foodD.SavefoodData(foodCollection);
         lvlD.SaveLvlData(lvlCollection);
         shopD.SaveShopData(itemCollection);
         settingsD.SaveSettingsData();
@@ -87,6 +99,11 @@ public class Data : MonoBehaviour {
     public Item getItem(int num)
     {
         return itemCollection.items[num];
+    }
+
+    public ItemCollection GetItemCollection()
+    {
+        return itemCollection;
     }
 
     public void setItemSaled(int num)
